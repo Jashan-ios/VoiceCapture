@@ -1,0 +1,6 @@
+// Copy this file to Config.xcconfig (same folder) and fill in real values.
+// Config.xcconfig is gitignored — never commit real secrets to it.
+// Note the $() between the two slashes below — xcconfig treats "//" as a
+// comment marker, so the slashes must be split like this to survive in a URL.
+BACKEND_URL = https:/$()/your-backend.example.com
+BACKEND_SHARED_SECRET = REPLACE_WITH_APP_SHARED_SECRET

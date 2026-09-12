@@ -1,32 +1,33 @@
-//
-//  VoiceCaptureApp.swift
-//  VoiceCapture
-//
-//  Created by Jashan Deol on 25/07/26.
-//
-
 import SwiftUI
 import SwiftData
 
 @main
 struct VoiceCaptureApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                NavigationStack {
+                    RecordView()
+                        .navigationDestination(for: Capture.self) { capture in
+                            CaptureDetailView(capture: capture)
+                        }
+                }
+                .tabItem {
+                    Label("Record", systemImage: "mic")
+                }
+
+                NavigationStack {
+                    CaptureListView()
+                        .navigationTitle("History")
+                        .navigationDestination(for: Capture.self) { capture in
+                            CaptureDetailView(capture: capture)
+                        }
+                }
+                .tabItem {
+                    Label("History", systemImage: "clock")
+                }
+            }
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(for: Capture.self)
     }
 }

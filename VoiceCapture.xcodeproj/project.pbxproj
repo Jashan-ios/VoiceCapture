@@ -8,11 +8,25 @@
 
 /* Begin PBXFileReference section */
 		18701CF33014D5A7000B2642 /* VoiceCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18701D043014D5A9000B2642 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		18701D033014D5A9000B2642 /* Exceptions for "VoiceCapture" folder in "VoiceCapture" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 18701CF23014D5A7000B2642 /* VoiceCapture */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		18701CF53014D5A7000B2642 /* VoiceCapture */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				18701D033014D5A9000B2642 /* Exceptions for "VoiceCapture" folder in "VoiceCapture" target */,
+			);
 			path = VoiceCapture;
 			sourceTree = "<group>";
 		};
@@ -32,6 +46,7 @@
 		18701CEA3014D5A7000B2642 = {
 			isa = PBXGroup;
 			children = (
+				18701D043014D5A9000B2642 /* Config.xcconfig */,
 				18701CF53014D5A7000B2642 /* VoiceCapture */,
 				18701CF43014D5A7000B2642 /* Products */,
 			);
@@ -248,6 +263,7 @@
 		};
 		18701D013014D5A9000B2642 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18701D043014D5A9000B2642 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -255,12 +271,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57PG9TT497;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoiceCapture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -280,6 +292,7 @@
 		};
 		18701D023014D5A9000B2642 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18701D043014D5A9000B2642 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -287,12 +300,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57PG9TT497;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoiceCapture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
